@@ -13,16 +13,16 @@ console.log(userLetters, userLetters.length);
  * @param {string}; Stringa da controllare
  * @returns {boolean}; valore booleano, true se è palindroma, false se non è palindroma
  */
-function elementIsPalindroma (wordToCheck, wordReversed) {
+function elementIsPalindroma (wordToCheck) {
     let wordWritten = false;
+    let wordReversed = "";
     for (let i = userLetters.length; i = 0; i--) {
-        wordReversed.push(userLetters.length[i]);
-        if (wordReversed === wordToCheck) {
-            wordWritten = true;
-        }
+        wordReversed+=(userLetters.length[i]);
+    }
+    if (wordReversed === wordToCheck) {
+        wordWritten = true;
     }
     return wordWritten;
-    console.log(wordReversed);
 }
 
 console.log(elementIsPalindroma(userWord));
