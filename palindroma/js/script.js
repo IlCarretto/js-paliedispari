@@ -3,8 +3,7 @@
 // Creare una funzione per capire se la parola inserita è palindroma.
 
 let userWord = prompt("Inserisci una parola palindroma")
-const userLetters = userWord.split(""); 
-console.log(userLetters, userLetters.length);
+console.log(userWord.length);
 
 // FUNCTIONS
 
@@ -16,12 +15,13 @@ console.log(userLetters, userLetters.length);
 function elementIsPalindroma (wordToCheck) {
     let wordWritten = false;
     let wordReversed = "";
-    for (let i = userLetters.length; i = 0; i--) {
-        wordReversed+=(userLetters.length[i]);
+    for (let i = userWord.length; i > 0; i--) {
+        wordReversed += userWord[i - 1];
     }
     if (wordReversed === wordToCheck) {
         wordWritten = true;
     }
+    console.log(wordReversed);
     return wordWritten;
 }
 
